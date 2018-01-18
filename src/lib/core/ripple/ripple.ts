@@ -6,21 +6,12 @@
  * found in the LICENSE file at https://angular.io/license
  */
 
-import {
-  Directive,
-  ElementRef,
-  Input,
-  Inject,
-  NgZone,
-  OnChanges,
-  SimpleChanges,
-  OnDestroy,
-  InjectionToken,
-  Optional,
-} from '@angular/core';
 import {Platform} from '@angular/cdk/platform';
-import {RippleConfig, RippleRenderer} from './ripple-renderer';
+import {Directive, ElementRef, Inject, InjectionToken,
+     Input, NgZone, OnChanges, OnDestroy, Optional, SimpleChanges,} from '@angular/core';
+
 import {RippleRef} from './ripple-ref';
+import {RippleConfig, RippleRenderer} from './ripple-renderer';
 
 /** Configurable options for `matRipple`. */
 export interface RippleGlobalOptions {
@@ -45,13 +36,9 @@ export const MAT_RIPPLE_GLOBAL_OPTIONS =
 @Directive({
   selector: '[mat-ripple], [matRipple]',
   exportAs: 'matRipple',
-  host: {
-    'class': 'mat-ripple',
-    '[class.mat-ripple-unbounded]': 'unbounded'
-  }
+  host: {'class': 'mat-ripple', '[class.mat-ripple-unbounded]': 'unbounded'}
 })
 export class MatRipple implements OnChanges, OnDestroy {
-
   /**
    * The element that triggers the ripple when click events are received. Defaults to the
    * directive's host element.
@@ -99,11 +86,8 @@ export class MatRipple implements OnChanges, OnDestroy {
   private _globalOptions: RippleGlobalOptions;
 
   constructor(
-    elementRef: ElementRef,
-    ngZone: NgZone,
-    platform: Platform,
-    @Optional() @Inject(MAT_RIPPLE_GLOBAL_OPTIONS) globalOptions: RippleGlobalOptions
-  ) {
+      elementRef: ElementRef, ngZone: NgZone, platform: Platform,
+      @Optional() @Inject(MAT_RIPPLE_GLOBAL_OPTIONS) globalOptions: RippleGlobalOptions) {
     this._rippleRenderer = new RippleRenderer(elementRef, ngZone, platform);
     this._globalOptions = globalOptions ? globalOptions : {};
 

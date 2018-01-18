@@ -1,3 +1,4 @@
+
 /**
  * @license
  * Copyright Google LLC All Rights Reserved.
@@ -19,3 +20,4 @@ import {ICON_REGISTRY_PROVIDER} from './icon-registry';
   providers: [ICON_REGISTRY_PROVIDER],
 })
 export class MatIconModule {}
+

@@ -1,57 +1,57 @@
 // Utility for fetching a nested value from a typography config.
 @function _mat-get-type-value($config, $level, $name) {
-  @return map-get(map-get($config, $level), $name);
-}
-
-// Gets the font size for a level inside a typography config.
-@function mat-font-size($config, $level) {
-  @return _mat-get-type-value($config, $level, font-size);
-}
-
-// Gets the line height for a level inside a typography config.
-@function mat-line-height($config, $level) {
-  @return _mat-get-type-value($config, $level, line-height);
-}
-
-// Gets the font weight for a level inside a typography config.
-@function mat-font-weight($config, $level) {
-  @return _mat-get-type-value($config, $level, font-weight);
-}
-
-// Gets the font-family from a typography config and removes the quotes around it.
-@function mat-font-family($config, $level: null) {
-  $font-family: map-get($config, font-family);
-
-  @if $level != null {
-    $font-family: _mat-get-type-value($config, $level, font-family);
+    @return map-get(map-get($config, $level), $name);
   }
-
-  @return unquote($font-family);
-}
-
-// Converts a typography level into CSS styles.
-@mixin mat-typography-level-to-styles($config, $level) {
-  $font-size: mat-font-size($config, $level);
-  $font-weight: mat-font-weight($config, $level);
-  $line-height: mat-line-height($config, $level);
-  $font-family: mat-font-family($config, $level);
-
-  // If any of the values are set to `inherit`, we can't use the shorthand
-  // so we fall back to passing in the individual properties.
-  @if ($font-size == inherit or
-       $font-weight == inherit or
-       $line-height == inherit or
-       $font-family == inherit) {
-
-    font-size: $font-size;
-    font-weight: $font-weight;
-    line-height: $line-height;
-    font-family: $font-family;
+  
+  // Gets the font size for a level inside a typography config.
+  @function mat-font-size($config, $level) {
+    @return _mat-get-type-value($config, $level, font-size);
   }
-  @else {
-    // Otherwise use the shorthand `font` to represent a typography level, because it's the the
-    // least amount of bytes. Note that we need to use interpolation for `font-size/line-height`
-    // in order to prevent SASS from dividing the two values.
-    font: $font-weight #{$font-size}/#{$line-height} $font-family;
+  
+  // Gets the line height for a level inside a typography config.
+  @function mat-line-height($config, $level) {
+    @return _mat-get-type-value($config, $level, line-height);
   }
+  
+  // Gets the font weight for a level inside a typography config.
+  @function mat-font-weight($config, $level) {
+    @return _mat-get-type-value($config, $level, font-weight);
+  }
+  
+  // Gets the font-family from a typography config and removes the quotes around it.
+  @function mat-font-family($config, $level: null) {
+    $font-family: map-get($config, font-family);
+  
+    @if $level != null {
+      $font-family: _mat-get-type-value($config, $level, font-family);
+    }
+  
+    @return unquote($font-family);
+  }
+  
+  // Converts a typography level into CSS styles.
+  @mixin mat-typography-level-to-styles($config, $level) {
+    $font-size: mat-font-size($config, $level);
+    $font-weight: mat-font-weight($config, $level);
+    $line-height: mat-line-height($config, $level);
+    $font-family: mat-font-family($config, $level);
+  
+    // If any of the values are set to `inherit`, we can't use the shorthand
+    // so we fall back to passing in the individual properties.
+    @if ($font-size == inherit or
+         $font-weight == inherit or
+         $line-height == inherit or
+         $font-family == inherit) {
+  
+      font-size: $font-size;
+      font-weight: $font-weight;
+      line-height: $line-height;
+      font-family: $font-family;
+    }
+    @else {
+      // Otherwise use the shorthand `font` to represent a typography level, because it's the the
+      // least amount of bytes. Note that we need to use interpolation for `font-size/line-height`
+      // in order to prevent SASS from dividing the two values.
+      font: $font-weight #{$font-size}/#{$line-height} $font-family;
+    }
 }

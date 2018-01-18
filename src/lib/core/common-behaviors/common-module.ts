@@ -9,10 +9,8 @@
 import {NgModule, InjectionToken, Optional, Inject, isDevMode} from '@angular/core';
 import {BidiModule} from '@angular/cdk/bidi';
 
-
 /** Injection token that configures whether the Material sanity checks are enabled. */
 export const MATERIAL_SANITY_CHECKS = new InjectionToken<boolean>('mat-sanity-checks');
-
 
 /**
  * Module that captures anything that should be loaded and/or run for *all* Angular Material
@@ -28,6 +26,7 @@ export const MATERIAL_SANITY_CHECKS = new InjectionToken<boolean>('mat-sanity-ch
   }],
 })
 export class MatCommonModule {
+
   /** Whether we've done the global sanity checks (e.g. a theme is loaded, there is a doctype). */
   private _hasDoneGlobalChecks = false;
 
@@ -89,18 +88,5 @@ export class MatCommonModule {
 
       this._document.body.removeChild(testElement);
     }
-  }
-
-  /** Checks whether HammerJS is available. */
-  _checkHammerIsAvailable(): void {
-    if (this._hasCheckedHammer || !this._window) {
-      return;
-    }
-
-    if (this._areChecksEnabled() && !this._window['Hammer']) {
-      console.warn(
-        'Could not find HammerJS. Certain Angular Material components may not work correctly.');
-    }
-    this._hasCheckedHammer = true;
   }
 }

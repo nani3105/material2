@@ -1,9 +1,9 @@
 /* stylelint-disable material/no-prefixes */
 @mixin user-select($value) {
-  -webkit-user-select: $value;
-  -moz-user-select: $value;
-  -ms-user-select: $value;
-  user-select: $value;
+    -webkit-user-select: $value;
+    -moz-user-select: $value;
+    -ms-user-select: $value;
+    user-select: $value;
 }
 
 @mixin input-placeholder {
@@ -24,18 +24,7 @@
   }
 }
 
-@mixin cursor-grab {
-  cursor: -webkit-grab;
-  cursor: grab;
-}
-
-@mixin cursor-grabbing {
-  cursor: -webkit-grabbing;
-  cursor: grabbing;
-}
-
 @mixin backface-visibility($value) {
-  -webkit-backface-visibility: $value;
-  backface-visibility: $value;
+    -webkit-backface-visibility: $value;
+    backface-visibility: $value;
 }
-/* stylelint-enable */

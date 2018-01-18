@@ -16,7 +16,6 @@ import {MatDialogContainer} from './dialog-container';
 
 
 // TODO(jelbourn): resizing
-
 // Counter for unique dialog ids.
 let uniqueId = 0;
 

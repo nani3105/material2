@@ -8,7 +8,7 @@
 
 import {Component, ChangeDetectionStrategy} from '@angular/core';
 import {FormControl, Validators} from '@angular/forms';
-import {ErrorStateMatcher} from '@angular/material';
+// import {ErrorStateMatcher} from '@angular/material';
 
 
 let max = 5;
@@ -62,18 +62,7 @@ export class InputDemo {
     }
   }
 
-  customErrorStateMatcher: ErrorStateMatcher = {
-    isErrorState: (control: FormControl | null) => {
-      if (control) {
-        const hasInteraction = control.dirty || control.touched;
-        const isInvalid = control.invalid;
 
-        return !!(hasInteraction && isInvalid);
-      }
-
-      return false;
-    }
-  };
 
   togglePlaceholderTestValue() {
     this.placeholderTestControl.setValue(this.placeholderTestControl.value === '' ? 'Value' : '');

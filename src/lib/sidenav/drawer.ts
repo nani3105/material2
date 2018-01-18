@@ -678,7 +678,6 @@ export class MatDrawerContainer implements AfterContentInit, OnDestroy {
     // 3. For drawers in `push` mode the should shift the content without resizing it. We do this by
     //    adding to the left or right margin and simultaneously subtracting the same amount of
     //    margin from the other side.
-
     let left = 0;
     let right = 0;
 

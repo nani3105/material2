@@ -22,12 +22,12 @@ import {
   MatListItem,
   MatListSubheaderCssMatStyler,
 } from './list';
-import {MatListOption, MatSelectionList} from './selection-list';
-import {MatDividerModule} from '@angular/material/divider';
+// import {MatListOption, MatSelectionList} from './selection-list';
+// import {MatDividerModule} from '@angular/material/divider';
 
 
 @NgModule({
-  imports: [MatLineModule, MatRippleModule, MatCommonModule, MatPseudoCheckboxModule, CommonModule],
+  imports: [MatLineModule, MatRippleModule, MatPseudoCheckboxModule, MatCommonModule, CommonModule],
   exports: [
     MatList,
     MatNavList,
@@ -37,10 +37,10 @@ import {MatDividerModule} from '@angular/material/divider';
     MatCommonModule,
     MatListIconCssMatStyler,
     MatListSubheaderCssMatStyler,
-    MatPseudoCheckboxModule,
-    MatSelectionList,
-    MatListOption,
-    MatDividerModule
+    // MatPseudoCheckboxModule,
+    // MatSelectionList,
+    // MatListOption,
+    // MatDividerModule
   ],
   declarations: [
     MatList,
@@ -49,8 +49,8 @@ import {MatDividerModule} from '@angular/material/divider';
     MatListAvatarCssMatStyler,
     MatListIconCssMatStyler,
     MatListSubheaderCssMatStyler,
-    MatSelectionList,
-    MatListOption
+    // MatSelectionList,
+    // MatListOption
   ],
 })
 export class MatListModule {}

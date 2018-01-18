@@ -31,7 +31,6 @@ import {
 
 
 // TODO(kara): Convert attribute selectors to classes when attr maps become available
-
 /** Default color palette for round buttons (mat-fab and mat-mini-fab) */
 const DEFAULT_ROUND_BUTTON_COLOR = 'accent';
 

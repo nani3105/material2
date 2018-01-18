@@ -90,11 +90,9 @@ export class DialogDemo {
   selector: 'demo-jazz-dialog',
   template: `
   <p>It's Jazz!</p>
-
   <mat-form-field>
     <input matInput placeholder="How much?" #howMuch>
   </mat-form-field>
-
   <p> {{ data.message }} </p>
   <button type="button" (click)="dialogRef.close(howMuch.value)">Close dialog</button>
   <button (click)="togglePosition()">Change dimensions</button>`
@@ -131,10 +129,8 @@ export class JazzDialog {
   ],
   template: `
     <h2 mat-dialog-title>Neptune</h2>
-
     <mat-dialog-content>
       <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Neptune_Full.jpg"/>
-
       <p>
         Neptune is the eighth and farthest known planet from the Sun in the Solar System. In the
         Solar System, it is the fourth-largest planet by diameter, the third-most-massive planet,
@@ -145,19 +141,16 @@ export class JazzDialog {
         astronomical symbol ♆, a stylised version of the god Neptune's trident.
       </p>
     </mat-dialog-content>
-
     <mat-dialog-actions [attr.align]="actionsAlignment">
       <button
         mat-raised-button
         color="primary"
         mat-dialog-close>Close</button>
-
       <a
         mat-button
         color="primary"
         href="https://en.wikipedia.org/wiki/Neptune"
         target="_blank">Read more on Wikipedia</a>
-
       <button
         mat-button
         color="secondary"
@@ -185,11 +178,9 @@ export class ContentElementDialog {
   ],
   template: `
     <h2 mat-dialog-title>Neptune</h2>
-
     <mat-dialog-content>
       <iframe frameborder="0" src="https://en.wikipedia.org/wiki/Neptune"></iframe>
     </mat-dialog-content>
-
     <mat-dialog-actions>
       <button
         mat-raised-button

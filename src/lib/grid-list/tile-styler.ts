@@ -280,4 +280,3 @@ function calc(exp: string): string { return `calc(${exp})`; }
 function normalizeUnits(value: string): string {
   return (value.match(/px|em|rem/)) ? value : value + 'px';
 }
-

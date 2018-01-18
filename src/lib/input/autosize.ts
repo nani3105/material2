@@ -1,3 +1,4 @@
+
 /**
  * @license
  * Copyright Google LLC All Rights Reserved.
@@ -68,7 +69,6 @@ export class MatTextareaAutosize implements AfterViewInit, DoCheck, OnDestroy {
     private _ngZone?: NgZone) {}
 
   // TODO(crisbeto): make the `_ngZone` a required param in the next major version.
-
   /** Sets the minimum height of the textarea as determined by minRows. */
   _setMinHeight(): void {
     const minHeight = this.minRows && this._cachedLineHeight ?

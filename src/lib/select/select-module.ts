@@ -26,3 +26,4 @@ import {ErrorStateMatcher} from '@angular/material/core';
   providers: [MAT_SELECT_SCROLL_STRATEGY_PROVIDER, ErrorStateMatcher]
 })
 export class MatSelectModule {}
+

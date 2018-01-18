@@ -7,7 +7,7 @@
  */
 
 import {Component, ViewEncapsulation} from '@angular/core';
-import {TooltipPosition} from '@angular/material';
+// import {TooltipPosition} from '@angular/material';
 
 
 @Component({
@@ -19,7 +19,7 @@ import {TooltipPosition} from '@angular/material';
   preserveWhitespaces: false,
 })
 export class TooltipDemo {
-  position: TooltipPosition = 'below';
+  // position: TooltipPosition = 'below';
   message: string = 'Here is the tooltip';
   tooltips: string[] = [];
   disabled = false;

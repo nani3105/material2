@@ -87,7 +87,6 @@ export class MatCheckboxBase {
 export const _MatCheckboxMixinBase =
   mixinTabIndex(mixinColor(mixinDisableRipple(mixinDisabled(MatCheckboxBase)), 'accent'));
 
-
 /**
  * A material design checkbox component. Supports all of the functionality of an HTML5 checkbox,
  * and exposes a similar API. A MatCheckbox can be either checked, unchecked, indeterminate, or

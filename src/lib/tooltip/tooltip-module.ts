@@ -13,10 +13,7 @@ import {CommonModule} from '@angular/common';
 import {NgModule} from '@angular/core';
 import {MatCommonModule} from '@angular/material/core';
 import {
-  MAT_TOOLTIP_SCROLL_STRATEGY_PROVIDER,
-  MAT_TOOLTIP_DEFAULT_OPTIONS,
   MatTooltip,
-  TooltipComponent,
 } from './tooltip';
 
 
@@ -28,20 +25,10 @@ import {
     PlatformModule,
     A11yModule,
   ],
-  exports: [MatTooltip, TooltipComponent, MatCommonModule],
-  declarations: [MatTooltip, TooltipComponent],
-  entryComponents: [TooltipComponent],
+  exports: [MatTooltip, MatCommonModule],
+  declarations: [MatTooltip],
   providers: [
-    MAT_TOOLTIP_SCROLL_STRATEGY_PROVIDER,
     ARIA_DESCRIBER_PROVIDER,
-    {
-      provide: MAT_TOOLTIP_DEFAULT_OPTIONS,
-      useValue: {
-        showDelay: 0,
-        hideDelay: 0,
-        touchendHideDelay: 1500
-      }
-    }
   ],
 })
 export class MatTooltipModule {}

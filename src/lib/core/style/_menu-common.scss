@@ -2,8 +2,6 @@
 @import './elevation';
 @import './list-common';
 
-/** The mixins below are shared between mat-menu and mat-select */
-
 // menu width must be a multiple of 56px
 $mat-menu-overlay-min-width: 112px !default;   // 56 * 2
 $mat-menu-overlay-max-width: 280px !default;   // 56 * 5
@@ -21,10 +19,11 @@ $mat-menu-icon-margin: 16px !default;
   -webkit-overflow-scrolling: touch;   // for momentum scroll on mobile
 }
 
+
 @mixin mat-menu-item-base() {
   @include mat-truncate-line();
 
-  // Needs to be a block for the ellipsis to work.
+      // Needs to be a block for the ellipsis to work.
   display: block;
   line-height: $mat-menu-item-height;
   height: $mat-menu-item-height;
@@ -47,46 +46,6 @@ $mat-menu-icon-margin: 16px !default;
     [dir='rtl'] & {
       margin-left: $mat-menu-icon-margin;
       margin-right: 0;
-    }
-  }
-}
-
-/**
- * This mixin adds the correct panel transform styles based
- * on the direction that the menu panel opens.
- */
-@mixin mat-menu-positions() {
-  &.mat-menu-after.mat-menu-below {
-    transform-origin: left top;
-  }
-
-  &.mat-menu-after.mat-menu-above {
-    transform-origin: left bottom;
-  }
-
-  &.mat-menu-before.mat-menu-below {
-    transform-origin: right top;
-  }
-
-  &.mat-menu-before.mat-menu-above {
-    transform-origin: right bottom;
-  }
-
-  [dir='rtl'] & {
-    &.mat-menu-after.mat-menu-below {
-      transform-origin: right top;
-    }
-
-    &.mat-menu-after.mat-menu-above {
-      transform-origin: right bottom;
-    }
-
-    &.mat-menu-before.mat-menu-below {
-      transform-origin: left top;
-    }
-
-    &.mat-menu-before.mat-menu-above {
-      transform-origin: left bottom;
     }
   }
 }

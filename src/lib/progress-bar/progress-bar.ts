@@ -11,7 +11,6 @@ import {Component, ChangeDetectionStrategy, Input, ViewEncapsulation} from '@ang
 // TODO(josephperrott): Benchpress tests.
 // TODO(josephperrott): Add ARIA attributes for progressbar "for".
 
-
 /**
  * <mat-progress-bar> component.
  */

@@ -52,4 +52,3 @@ export function mixinColor<T extends Constructor<HasElementRef>>(base: T,
     }
   };
 }
-

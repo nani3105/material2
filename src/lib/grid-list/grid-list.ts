@@ -31,7 +31,6 @@ import {
 // TODO(kara): Conditional (responsive) column count / row size.
 // TODO(kara): Re-layout on window resize / media change (debounced).
 // TODO(kara): gridTileHeader and gridTileFooter.
-
 const MAT_FIT_MODE = 'fit';
 
 @Component({
@@ -155,3 +154,4 @@ export class MatGridList implements OnInit, AfterContentChecked {
     }
   }
 }
+

@@ -19,7 +19,6 @@
     default: map-get($base-palette, $default),
     lighter: map-get($base-palette, $lighter),
     darker: map-get($base-palette, $darker),
-
     default-contrast: mat-contrast($base-palette, $default),
     lighter-contrast: mat-contrast($base-palette, $lighter),
     darker-contrast: mat-contrast($base-palette, $darker)
