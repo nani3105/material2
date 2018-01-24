@@ -13,6 +13,7 @@
 @import '../../sidenav/sidenav-theme';
 @import '../../snack-bar/snack-bar-theme';
 @import '../../form-field/form-field-theme';
+@import '../../tabs/tabs-theme';
 
 
 // Create a theme.
@@ -31,4 +32,5 @@
     @include mat-toolbar-theme($theme);
     @include mat-snack-bar-theme($theme);
     @include mat-checkbox-theme($theme);
+    @include mat-tabs-theme($theme);
 }

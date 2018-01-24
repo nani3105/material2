@@ -25,6 +25,8 @@ export * from '@angular/material/grid-list';
 export * from '@angular/material/checkbox';
 export * from '@angular/material/tooltip';
 // export * from '@angular/material/select';
+export * from '@angular/material/tabs';
+
 
 
 

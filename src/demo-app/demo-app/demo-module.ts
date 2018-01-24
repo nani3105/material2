@@ -34,6 +34,7 @@ import {
 } from '../overlay/overlay-demo';
 import {TooltipDemo} from '../tooltip/tooltip-demo';
 import {TypographyDemo} from '../typography/typography-demo';
+import {FoggyTabContent, RainyTabContent, SunnyTabContent, TabsDemo} from '../tabs/tabs-demo';
 
 
 @NgModule({
@@ -63,6 +64,10 @@ import {TypographyDemo} from '../typography/typography-demo';
     IconDemo,
     GridListDemo,
     SnackBarDemo,
+    RainyTabContent,
+    SunnyTabContent,
+    FoggyTabContent,
+    TabsDemo,
     JazzDialog,
     ContentElementDialog,
     RotiniPanel,

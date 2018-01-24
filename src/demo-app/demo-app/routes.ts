@@ -21,6 +21,8 @@ import {SnackBarDemo} from '../snack-bar/snack-bar-demo';
 import {DemoApp, Home} from './demo-app';
 import {OverlayDemo} from '../overlay/overlay-demo';
 import {TypographyDemo} from '../typography/typography-demo';
+import {TabsDemo} from '../tabs/tabs-demo';
+import {TABS_DEMO_ROUTES} from '../tabs/routes';
 
 
 export const DEMO_APP_ROUTES: Routes = [
@@ -39,6 +41,7 @@ export const DEMO_APP_ROUTES: Routes = [
     {path: 'snack-bar', component: SnackBarDemo},
     {path: 'overlay', component: OverlayDemo},
     {path: 'typography', component: TypographyDemo},
+    {path: 'tabs', component: TabsDemo, children: TABS_DEMO_ROUTES},
   ]}
 ];
 

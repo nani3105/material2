@@ -23,6 +23,7 @@ import {
   MatPseudoCheckboxModule,
   MatGridListModule,
   MatSidenavModule,
+  MatTabsModule,
   MatSnackBarModule,
   MatToolbarModule,
 } from '@angular/material';
@@ -56,6 +57,7 @@ import {PortalModule} from '@angular/cdk/portal';
     MatSidenavModule,
     MatToolbarModule,
     MatPseudoCheckboxModule,
+    MatTabsModule,
     CdkTableModule,
     A11yModule,
     BidiModule,

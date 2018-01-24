@@ -107,7 +107,7 @@ export class ComponentPortal<T> extends Portal<ComponentRef<T>> {
 /**
  * A `TemplatePortal` is a portal that represents some embedded template (TemplateRef).
  */
-export class TemplatePortal<C> extends Portal<C> {
+export class TemplatePortal<C = any> extends Portal<C> {
   /** The embedded template that will be used to instantiate an embedded View in the host. */
   templateRef: TemplateRef<C>;
 
